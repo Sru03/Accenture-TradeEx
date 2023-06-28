@@ -1,9 +1,10 @@
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'; // Import the HomePage component
-import TradieRegisterationPage from './pages/TradieRegisteration';
 import './App.css';
 import FindTradie from './pages/FindTradie';
 import Navbar from './components/Navbar'
+import TradieRegisterationPage from './pages/TradieRegisteration';
+
 
 function App() {
   return (

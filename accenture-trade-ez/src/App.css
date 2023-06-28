@@ -147,16 +147,18 @@ ul{
   cursor: pointer;
 }
 
-.textbox-container {
-  place-items: center;
+/* .textbox-container {
+  place-items: left;
 }
 
 .page-heading-container{
   display: flex;
   gap: 100px;
+  color: #FFF;
 }
 
 .register-page-heading {
+  display: flex;
   text-align: left;
   font-family: 'Josefin Sans';
   font-weight: bold;
@@ -164,10 +166,15 @@ ul{
 }
 
 .linkback {
-  text-align: left;
+  display: inline;
   font-family: 'Josefin Sans';
   font-size: 24.01px;
   font-style: italic;
+}
+
+.linkback a {
+  color: #FCA311;
+  
 }
 
 .rounded-textbox {
@@ -185,7 +192,97 @@ ul{
   text-align: left;
   font-family: 'Josefin Sans';
   font-size: 26.9px;
+  margin-left: auto;
+} */
+
+ /* Style inputs, select elements and textareas */
+ input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: #FFF;
+  font-family: 'Josefin Sans';
+  font-size: 26.9px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
+  font-family: 'Josefin Sans';
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #14213D;
+  padding: 20px;
+  margin-left: 150px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 60%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+} 
+
+.page-heading {
+  display: flex;
+  text-align: left;
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  font-size: 38.75px;
+  color: #FFF;
+}
+
+.section-heading {
+  display: flex;
+  text-align: left;
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  font-size: 26.9px;
+  color: #FFF;
+  margin-top: 70px;
+}
+
+
 
 
 
