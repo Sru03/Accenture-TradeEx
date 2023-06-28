@@ -1,6 +1,7 @@
 import React from 'react';
 import logo1 from './trade_ez_logonav.png';
 import logo2 from './main_logo.png';
+import SearchBar from './SearchBar';
 
 const HomePage = () => {
   return (
@@ -39,13 +40,7 @@ const HomePage = () => {
       </div>
 
       {/* Search Bar */}
-      <div className="search-bar">
-        <span className="search-icon">
-          <i className="fas fa-search"></i>
-        </span>
-        <input type="search" placeholder="                    What job do you need done today?" />
-        <button>Search</button>
-      </div>
+      <SearchBar/>
 
       {/* Additional content goes here */}
     </div>
