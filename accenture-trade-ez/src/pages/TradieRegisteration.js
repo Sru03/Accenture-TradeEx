@@ -17,6 +17,8 @@ const TradieRegisterationPage = () => {
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
   const [selectedTradeTypes, setSelectedTradeTypes] = useState([]);
+  const [businessname, setbusinessname] = useState('');
+  const [businessnumber, setbusinessnumber] = useState('');
   // const [phoneNumber, setPhoneNumber] = useState('');
   
   const [firstnameError, setFirstNameError] = useState('');
@@ -25,6 +27,8 @@ const TradieRegisterationPage = () => {
   const [passwordError, setPasswordError] = useState('');
   const [usernameError, setUserNameError] = useState('');
   const [selectedTradeTypesError, setSelectedTradeTypesError] = useState('');
+  const [businessnameerror, setbusinessnameerror] = useState('');
+  const [businessnumbererror, setbusinessnumbererror] = useState('');
   // const [phoneNumberError, setPhoneNumberError] = useState('');
   const [pdfFile, setPdfFile] = useState(null);
 
@@ -78,6 +82,18 @@ const TradieRegisterationPage = () => {
     setSelectedTradeTypesError(
       selectedOptions.length > 0 ? '' : 'Please select at least one trade type'
     );
+  };
+
+  const handleBusinessNameChange = (e) => {
+    const { value } = e.target;
+    setbusinessname(value);
+    setbusinessnameerror(value ? '' : "Please enter your Business's name");
+  };
+
+  const handleBusinessNumberChange = (e) => {
+    const { value } = e.target;
+    setbusinessnumber(value);
+    setbusinessnumbererror(value ? '' : "Please enter your Business's phone number");
   };
 
   const handleSubmit = (e) => {
@@ -230,16 +246,18 @@ const TradieRegisterationPage = () => {
         <div className="col-25">
           <label for="bname">Business Name</label>
         </div>
-        <div className="col-75">
-          <input type="text" id="bname" name="bname"></input>
+        <div className={`col-75 ${businessnameerror && 'error'}`}>
+          <input type="text" id="bname" name="bname" onChange={handleBusinessNameChange} value={businessname}></input>
+          {businessnameerror && <span className="error-message">{businessnameerror}</span>}
         </div>
       </div>
       <div className="row">
         <div className="col-25">
           <label for="bnumber">New Zealand Business Number</label>
         </div>
-        <div className="col-75">
-          <input type="text" id="bnumber" name="bnumber"></input>
+        <div className={`col-75 ${businessnumbererror && 'error'}`}>
+          <input type="text" id="bnumber" name="bnumber" onChange={handleBusinessNumberChange} value={businessnumber}></input>
+          {businessnumbererror && <span className="error-message">{businessnumbererror}</span>}
         </div>
       </div>
 

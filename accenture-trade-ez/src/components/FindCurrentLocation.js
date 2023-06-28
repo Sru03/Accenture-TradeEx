@@ -28,7 +28,7 @@ function CurrentLocation() {
           Latitude: {latitude.toFixed(6)}, Longitude: {longitude.toFixed(6)}
         </p>
       ) : (
-        <p>Loading...</p>
+        <p className='findCurrentLocation'>Loading...</p>
       )}
     </div>
   );

@@ -283,16 +283,6 @@ input[type=submit] {
   margin-top: 70px;
 }
 
-.fileupload {
-  display: flex;
-  text-align: left;
-  font-family: 'Josefin Sans';
-  font-weight: bold;
-  font-size: 26.9px;
-  color: #FFF;
-  margin-top: 70px;
-}
-
 .error input{
   border: 3px solid red;
 }
@@ -306,6 +296,13 @@ input[type=submit] {
   font-family: 'Josefin Sans';
   font-size: 19px;
   color: orange;
+}
+
+.filetext {
+  text-align: center;
+  font-family: 'Josefin Sans';
+  font-size: 15px;
+  color: white;
 }
 
 
