@@ -43,12 +43,22 @@ const TradieRegisterationPage = () => {
   };
 
   return (
-    <div>
-      <h1>Registration Form</h1>
+    <div className='container'>
+      <div className='page-heading-container'>
+        <div>
+          <p className="register-page-heading">Register as a Tradie</p>
+        </div>
+
+        <div>
+          <p className='linkback'>Is this account for personal use?</p>
+          <a href='/register-user' className='linkback'>Register as a User</a>
+        </div>
+      </div>
+
       <form onSubmit={handleSubmit}>
         <div className="textbox-container">
-        <p className="textbox-heading">UserName</p>
-        <TextBox label="name" value={name} onChange={handleNameChange} />
+          <p className="textbox-heading">UserName</p>
+          <TextBox label="name" value={name} onChange={handleNameChange} />
         </div>
         
         <FileUpload label="pdf" onChange={handleFileChange} />

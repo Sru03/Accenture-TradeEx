@@ -148,15 +148,26 @@ ul{
 }
 
 .textbox-container {
-  display: grid;
   place-items: center;
 }
 
-.textbox-heading {
+.page-heading-container{
+  display: flex;
+  gap: 100px;
+}
+
+.register-page-heading {
   text-align: left;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans';
   font-weight: bold;
   font-size: 38.75px;
+}
+
+.linkback {
+  text-align: left;
+  font-family: 'Josefin Sans';
+  font-size: 24.01px;
+  font-style: italic;
 }
 
 .rounded-textbox {
@@ -165,6 +176,17 @@ ul{
   border: 1px solid #ccc;
   text-align: left;
 }
+
+.container {
+  margin-left: 100px;
+}
+
+.textbox-heading{
+  text-align: left;
+  font-family: 'Josefin Sans';
+  font-size: 26.9px;
+}
+
 
 
 
