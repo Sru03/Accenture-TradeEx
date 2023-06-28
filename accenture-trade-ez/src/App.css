@@ -36,3 +36,115 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-color: #14213D;
+  /*background: linear-gradient(90deg, #000000, #3533cd);
+  background-size: 200% 200%;
+  -webkit-animation: Animation 5s ease infinite;
+  -moz-animation: Animation 5s ease infinite;
+  animation: Animation 5s ease infinite;*/
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #FFF;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-right: 100px;
+}
+
+.navbar-list {
+  list-style-type: none;
+  display: flex;
+  gap: 60px;
+}
+
+.navbar-item {
+  display: inline;
+}
+
+.navbar-link {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.logo-container {
+  margin-left: 20px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/*@-webkit-keyframes Animation 
+{
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation 
+{
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@keyframes Animation 
+{ 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}*/
+
+.business-logo {
+  width: 500px; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 80px;
+  margin-left: 70px;
+}
+
+.yellow-text {
+  color: orange;
+}
+
+.slogan{
+  color: #fff;
+  margin: 0 auto;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 70px;
+}
+
+.search-bar input[type="search"] {
+  width: 700px; /* Adjust the width as needed */
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #14213D;
+  color: #FFF;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+

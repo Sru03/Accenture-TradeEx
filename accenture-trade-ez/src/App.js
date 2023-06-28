@@ -1,7 +1,8 @@
 import logo from './logo.svg';
+import HomePage from './HomePage'; // Import the HomePage component
 import './App.css';
 
-function App() {
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +21,12 @@ function App() {
       </header>
     </div>
   );
+}*/
+function App() {
+  return (
+    <div className="App">
+      <HomePage/>
+    </div>
+  );
 }
-
 export default App;
