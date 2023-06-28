@@ -198,4 +198,37 @@ ul{
   border-radius: 10px;
 }
 
+.sign-up-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 50px;
+}
+
+.register-user-button,
+.register-tradie-button {
+  background-color: #FFF;
+  width: 400px;
+  color: #000;
+  border: none;
+  border-radius: 20px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 24px; 
+  transition: background-color 0.3s ease; 
+}
+
+.register-user-button:hover,
+.register-tradie-button:hover {
+  background-color: #F6F6F6; 
+  cursor: pointer; 
+}
+
+.existing-acc {
+  color: white;
+}
+
+.second-line {
+  margin-top: -20px;
+}
+
 
