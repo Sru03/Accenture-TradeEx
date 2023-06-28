@@ -200,7 +200,7 @@ ul{
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   box-sizing: border-box;
   resize: vertical;
 }
@@ -216,14 +216,15 @@ label {
 
 /* Style the submit button */
 input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #FCA311;
+  color: black;
   padding: 12px 20px;
   border: none;
-  border-radius: 8px;
+  border-radius: 30px;
   cursor: pointer;
   float: right;
   font-family: 'Josefin Sans';
+  font-size: 27px;
 }
 
 /* Style the container */
@@ -281,6 +282,25 @@ input[type=submit] {
   color: #FFF;
   margin-top: 70px;
 }
+
+FileUpload {
+  display: flex;
+  text-align: left;
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  font-size: 26.9px;
+  color: #FFF;
+  margin-top: 70px;
+}
+
+.error input{
+  border: 3px solid red;
+}
+
+.error-message {
+  color: red;
+}
+
 
 
 
