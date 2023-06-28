@@ -1,5 +1,7 @@
 import logo from './assets/logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage'; // Import the HomePage component
+import TradieRegisterationPage from './pages/TradieRegisteration';
 import './App.css';
 
 /*function App() {
@@ -24,8 +26,16 @@ import './App.css';
 }*/
 function App() {
   return (
+    // <div className="App">
+    //   <HomePage/>
+    // </div>
     <div className="App">
-      <HomePage/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/tradie-register" element={<TradieRegisterationPage />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

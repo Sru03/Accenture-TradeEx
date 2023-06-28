@@ -147,4 +147,24 @@ ul{
   cursor: pointer;
 }
 
+.textbox-container {
+  display: grid;
+  place-items: center;
+}
+
+.textbox-heading {
+  text-align: left;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: 38.75px;
+}
+
+.rounded-textbox {
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+
 
