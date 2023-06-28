@@ -43,7 +43,7 @@ const HomePage = () => {
         <span className="search-icon">
           <i className="fas fa-search"></i>
         </span>
-        <input type="search" placeholder="                    What job do you need done today?" />
+        <input type="search" placeholder="What job do you need done today?" />
         <button>Search</button>
       </div>
 
