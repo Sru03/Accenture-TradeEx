@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import FileUpload from '../components/FileUpload';
-import TextBox from '../components/UserFormTextBox';
+import FindCurrentLocation from '../components/FindCurrentLocation';
 
 const TradieRegisterationPage = () => {
 
@@ -217,7 +217,8 @@ const TradieRegisterationPage = () => {
           <label for="location">Location</label>
         </div>
         <div className="col-75">
-          <input type="text" id="location" name="location"></input>
+          {/* <input type="text" id="location" name="location"></input> */}
+          <FindCurrentLocation />
         </div>
       </div>
 
@@ -235,7 +236,7 @@ const TradieRegisterationPage = () => {
       </div>
       <div className="row">
         <div className="col-25">
-          <label for="bnumber">New Zealand Business Name</label>
+          <label for="bnumber">New Zealand Business Number</label>
         </div>
         <div className="col-75">
           <input type="text" id="bnumber" name="bnumber"></input>

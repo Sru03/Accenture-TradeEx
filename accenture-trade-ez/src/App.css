@@ -283,7 +283,7 @@ input[type=submit] {
   margin-top: 70px;
 }
 
-FileUpload {
+.fileupload {
   display: flex;
   text-align: left;
   font-family: 'Josefin Sans';
@@ -299,6 +299,13 @@ FileUpload {
 
 .error-message {
   color: red;
+}
+
+.findCurrentLocation {
+  text-align: left;
+  font-family: 'Josefin Sans';
+  font-size: 19px;
+  color: orange;
 }
 
 
