@@ -147,4 +147,24 @@ ul{
   cursor: pointer;
 }
 
+.job-container {
+
+  display : flex;
+  flex-wrap : wrap;
+  padding: 10px;
+  margin: 20px;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.job-item {
+
+  padding : 20px;
+  background-color: white;
+  border-radius: 20px;
+
+
+}
+
 
