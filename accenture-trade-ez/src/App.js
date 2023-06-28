@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'; // Import the HomePage component
 import './App.css';
 import FindTradie from './pages/FindTradie';
+import MarketPlace from './pages/MarketPlace';
 import Navbar from './components/Navbar'
 
 /*function App() {
@@ -31,6 +32,7 @@ function App() {
       <div className="App">
         <Routes>
             <Route path="/" element={<HomePage/>} />
+            <Route path="/marketplace" element={<MarketPlace/>} />
             <Route path="/find-tradie" element={<FindTradie />} />
             <Route path="/*" element={<></>} />
         </Routes>
