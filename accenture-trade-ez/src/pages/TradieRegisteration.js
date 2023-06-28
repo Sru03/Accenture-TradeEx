@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import TextBox from './TextBox';
-import FileInput from './FileInput';
+import FileUpload from '../components/FileUpload';
+import TextBox from '../components/UserFormTextBox';
 
 const TradieRegisterationPage = () => {
   const [name, setName] = useState('');
@@ -46,9 +46,12 @@ const TradieRegisterationPage = () => {
     <div>
       <h1>Registration Form</h1>
       <form onSubmit={handleSubmit}>
+        <div className="textbox-container">
+        <p className="textbox-heading">UserName</p>
         <TextBox label="name" value={name} onChange={handleNameChange} />
-        <TextBox label="email" value={email} onChange={handleEmailChange} />
-        <FileInput label="pdf" onChange={handleFileChange} />
+        </div>
+        
+        <FileUpload label="pdf" onChange={handleFileChange} />
         <button type="submit">Submit</button>
       </form>
     </div>
