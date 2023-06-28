@@ -1,7 +1,7 @@
 import React from 'react';
-import logo1 from './trade_ez_logonav.png';
-import logo2 from './main_logo.png';
-import SearchBar from './SearchBar';
+import logo1 from '../assets/trade_ez_logonav.png';
+import logo2 from '../assets/main_logo.png';
+import SearchBar from '../components/SearchBar';
 
 const HomePage = () => {
   return (

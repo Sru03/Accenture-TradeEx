@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import HomePage from './HomePage'; // Import the HomePage component
+import logo from './assets/logo.svg';
+import HomePage from './pages/HomePage'; // Import the HomePage component
 import './App.css';
 
 /*function App() {
