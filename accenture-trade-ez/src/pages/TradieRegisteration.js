@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TextBox from './TextBox';
 import FileInput from './FileInput';
 
-function App() {
+const TradieRegisterationPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [pdfFile, setPdfFile] = useState(null);
@@ -55,4 +55,4 @@ function App() {
   );
 }
 
-export default App;
+export default TradieRegisterationPage;
