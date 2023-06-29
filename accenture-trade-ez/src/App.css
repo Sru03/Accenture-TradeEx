@@ -410,8 +410,12 @@ input[type=submit] {
   color: orange;
 }
 
-
-
+.search-tradie {
+  display: flex;
+  /* justify-content: center; */
+  margin-top: 50px;
+  margin-left: 80px;
+}
 
 .search-tradie .search-icon {
   color: white;
