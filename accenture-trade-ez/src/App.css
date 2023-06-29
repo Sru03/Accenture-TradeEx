@@ -37,6 +37,10 @@
   }
 }
 
+* {
+  font-family: 'Josefin Sans';
+}
+
 body{
   background-color: #14213D;
   /*background: linear-gradient(90deg, #000000, #3533cd);
