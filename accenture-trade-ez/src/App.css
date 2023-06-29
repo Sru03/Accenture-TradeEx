@@ -231,8 +231,8 @@ input[type=submit] {
 .container {
   border-radius: 5px;
   background-color: #14213D;
-  padding: 20px;
-  margin-left: 150px;
+  padding: 30px;
+  margin-left: 200px;
 }
 
 /* Floating column for labels: 25% width */
@@ -265,7 +265,7 @@ input[type=submit] {
 } 
 
 .page-heading {
-  display: flex;
+  display: inline;
   text-align: left;
   font-family: 'Josefin Sans';
   font-weight: bold;
@@ -294,7 +294,7 @@ input[type=submit] {
 .findCurrentLocation {
   text-align: left;
   font-family: 'Josefin Sans';
-  font-size: 19px;
+  font-size: 24.01px;
   color: orange;
 }
 
@@ -305,7 +305,22 @@ input[type=submit] {
   color: white;
 }
 
+.linkback {
+  display: inline;
+  font-family: 'Josefin Sans';
+  font-size: 24.01px;
+  font-style: italic;
+  color: #FFF;
 
+}
+
+.link_to_user {
+  display: inline;
+  font-family: 'Josefin Sans';
+  font-size: 24.01px;
+  font-style: italic;
+  color: orange;
+}
 
 
 

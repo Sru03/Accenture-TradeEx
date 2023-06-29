@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import FileUpload from '../components/FileUpload';
-import FindCurrentLocation from '../components/FindCurrentLocation';
 
 const TradieRegisterationPage = () => {
 
@@ -19,7 +18,8 @@ const TradieRegisterationPage = () => {
   const [selectedTradeTypes, setSelectedTradeTypes] = useState([]);
   const [businessname, setbusinessname] = useState('');
   const [businessnumber, setbusinessnumber] = useState('');
-  // const [phoneNumber, setPhoneNumber] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [pdfFile, setPdfFile] = useState(null);
   
   const [firstnameError, setFirstNameError] = useState('');
   const [lastnameError, setLastNameError] = useState('');
@@ -29,8 +29,11 @@ const TradieRegisterationPage = () => {
   const [selectedTradeTypesError, setSelectedTradeTypesError] = useState('');
   const [businessnameerror, setbusinessnameerror] = useState('');
   const [businessnumbererror, setbusinessnumbererror] = useState('');
-  // const [phoneNumberError, setPhoneNumberError] = useState('');
-  const [pdfFile, setPdfFile] = useState(null);
+  const [phoneNumberError, setPhoneNumberError] = useState('');
+  const [pdfFileError, setPdfFileError] = useState(null);
+  
+
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
 
   const handleFirstNameChange = (e) => {
     const { value } = e.target;
@@ -96,13 +99,58 @@ const TradieRegisterationPage = () => {
     setbusinessnumbererror(value ? '' : "Please enter your Business's phone number");
   };
 
+  const cities = [
+    'Auckland',
+    'Wellington',
+    'Christchurch',
+    'Hamilton',
+    'Tauranga',
+    'Dunedin',
+    'Palmerston North',
+    'Napier',
+    'Nelson',
+    'Rotorua',
+    'New Plymouth',
+    'Whangārei',
+    'Invercargill',
+    'Whanganui',
+    'Gisborne',
+    'Taranaki',
+    'Hawke\'s Bay',
+    'Bay of Plenty',
+    'Manawatū-Whanganui',
+    'Northland',
+    'Waikato',
+    'Canterbury',
+    'Otago',
+    'Marlborough',
+    'West Coast',
+    'Southland'
+  ];
+  
+  const [selectedCity, setSelectedCity] = useState('');
+
+  const handleCityChange = (e) => {
+    setSelectedCity(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (selectedTradeTypes.length === 0) {
-      setSelectedTradeTypesError('Please select at least one trade type');
-      return;
-    }
+  // Check for errors
+  if (emailError || passwordError || usernameError || selectedTradeTypesError 
+    || firstnameError || lastnameError || phoneNumberError || businessnameerror
+     || businessnumbererror || pdfFileError) {
+    // At least one error exists
+    alert('Please fill in all required fields correctly');
+    return;
+  }
+
+  // Check checkbox status
+  if (!isCheckboxChecked) {
+    alert('Please agree to the terms and conditions');
+    return;
+  }
 
     // const formData = new FormData();
     // formData.append('name', name);
@@ -125,32 +173,14 @@ const TradieRegisterationPage = () => {
   };
 
   return (
-    // <div className='container'>
-    //   <div className='page-heading-container'>
-    //     <div>
-    //       <p className="register-page-heading">Register as a Tradie</p>
-    //     </div>
-
-    //     <div>
-    //       <p className='linkback'>Is this account for personal use?</p>
-    //       <a href='/register-user' className='linkback'>Register as a User</a>
-    //     </div>
-    //   </div>
-
-    //   <form onSubmit={handleSubmit}>
-    //     <div className="textbox-container">
-    //         <label className="textbox-heading" for="email">Email * </label>
-    //         <br />
-    //         <TextBox id="email" type="text" name="email" required />
-    //     </div>
-        
-    //     <FileUpload label="pdf" onChange={handleFileChange} />
-    //     <button type="submit">Submit</button>
-    //   </form>
-    // </div>
     <div className="container">
       <div>
         <p className="page-heading">Register as a Tradie</p>
+      </div>
+
+      <div>
+          <p className='linkback'>Not a tradie? </p>
+          <a href='/register-user' className='link_to_user'>Register as a User</a>
       </div>
       
     <form action="action_page.php" onSubmit={handleSubmit}>
@@ -159,34 +189,34 @@ const TradieRegisterationPage = () => {
       </div>
       <div className="row">
         <div className="col-25">
-          <label htmlFor="email">Email *</label>
+          <label htmlFor="email">Email</label>
         </div>
         <div className={`col-75 ${emailError && 'error'}`}>
-          <input type="text" id="email" name="email" onChange={handleEmailChange} value={email}></input>
+          <input type="text" id="email" name="email" onChange={handleEmailChange} value={email} required></input>
           {emailError && <span className="error-message">{emailError}</span>}
         </div>
       </div>
       <div className="row">
         <div className="col-25">
-          <label for="password">Password *</label>
+          <label for="password">Password</label>
         </div>
         <div className={`col-75 ${passwordError && 'error'}`}>
-          <input type="text" id="password" name="password" onChange={handlePasswordChange} value={password}></input>
+          <input type="text" id="password" name="password" onChange={handlePasswordChange} value={password} required></input>
           {passwordError && <span className="error-message">{passwordError}</span>}
         </div>
       </div>
       <div className="row">
         <div className="col-25">
-          <label for="uname">Username *</label>
+          <label for="uname">Username</label>
         </div>
         <div className={`col-75 ${usernameError && 'error'}`}>
-          <input type="text" id="uname" name="uname" onChange={handleUsernameChange} value={username}></input>
+          <input type="text" id="uname" name="uname" onChange={handleUsernameChange} value={username} required></input>
           {usernameError && <span className="error-message">{usernameError}</span>}
         </div>
       </div>
       <div className="row">
         <div className="col-25">
-          <label for="trade_type">Trade Type *</label>
+          <label for="trade_type">Trade Type</label>
         </div>
         <div className={`col-75 ${selectedTradeTypesError && 'error'}`}>
           <select multiple id="trade_type" name="trade_type" value={selectedTradeTypes} onChange={handleTradeTypeChange} required>
@@ -204,19 +234,19 @@ const TradieRegisterationPage = () => {
       </div>
       <div className="row">
         <div className="col-25">
-          <label for="fname">First Name *</label>
+          <label for="fname">First Name</label>
         </div>
         <div className={`col-75 ${firstnameError && 'error'}`}>
-          <input type="text" id="fname" name="firstname" placeholder="E.g. John" onChange={handleFirstNameChange} value={firstname}></input>
+          <input type="text" id="fname" name="firstname" placeholder="E.g. John" onChange={handleFirstNameChange} value={firstname} required></input>
           {firstnameError && <span className="error-message">{firstnameError}</span>}
         </div>
       </div>
       <div className="row">
         <div className="col-25">
-          <label for="lname">Last Name *</label>
+          <label for="lname">Last Name</label>
         </div>
         <div className={`col-75 ${lastnameError && 'error'}`}>
-          <input type="text" id="lname" name="lastname" placeholder="E.g. Smith" onChange={handleLastNameChange} value={lastname}></input>
+          <input type="text" id="lname" name="lastname" placeholder="E.g. Smith" onChange={handleLastNameChange} value={lastname} required></input>
           {lastnameError && <span className="error-message">{lastnameError}</span>}
         </div>
       </div>
@@ -225,7 +255,7 @@ const TradieRegisterationPage = () => {
           <label for="phone">Phone Number</label>
         </div>
         <div className="col-75">
-          <input type="text" id="phone" name="phone"></input>
+          <input type="text" id="phone" name="phone" required></input>
         </div>
       </div>
       <div className="row">
@@ -233,8 +263,12 @@ const TradieRegisterationPage = () => {
           <label for="location">Location</label>
         </div>
         <div className="col-75">
-          {/* <input type="text" id="location" name="location"></input> */}
-          <FindCurrentLocation />
+          <select id="city" value={selectedCity} onChange={handleCityChange} required>
+        <option value="">-- Select --</option>
+        {cities.map((city) => (
+          <option key={city} value={city}>{city}</option>
+        ))}
+      </select>
         </div>
       </div>
 
@@ -247,7 +281,7 @@ const TradieRegisterationPage = () => {
           <label for="bname">Business Name</label>
         </div>
         <div className={`col-75 ${businessnameerror && 'error'}`}>
-          <input type="text" id="bname" name="bname" onChange={handleBusinessNameChange} value={businessname}></input>
+          <input type="text" id="bname" name="bname" onChange={handleBusinessNameChange} value={businessname} required></input>
           {businessnameerror && <span className="error-message">{businessnameerror}</span>}
         </div>
       </div>
@@ -256,7 +290,7 @@ const TradieRegisterationPage = () => {
           <label for="bnumber">New Zealand Business Number</label>
         </div>
         <div className={`col-75 ${businessnumbererror && 'error'}`}>
-          <input type="text" id="bnumber" name="bnumber" onChange={handleBusinessNumberChange} value={businessnumber}></input>
+          <input type="text" id="bnumber" name="bnumber" onChange={handleBusinessNumberChange} value={businessnumber} required></input>
           {businessnumbererror && <span className="error-message">{businessnumbererror}</span>}
         </div>
       </div>
@@ -266,12 +300,19 @@ const TradieRegisterationPage = () => {
           <label for="certs">Certification</label>
         </div>
         <div className="col-75">
-          <FileUpload onChange={handleFileChange} />
+          <FileUpload onChange={handleFileChange} required/>
         </div>
       </div>
 
       <div className="row">
-        <input type="submit" value="Send for Approval"></input>
+        <div className="linkback">
+          <input type="checkbox" id="terms" name="terms" value="terms" checked={isCheckboxChecked} onChange={e => setIsCheckboxChecked(e.target.checked)}></input>
+          I agree to the <a href="#" className='link_to_user'>Terms and Conditions</a> and <a href="#" className='link_to_user'>Privacy Policy</a>
+        </div>
+      </div>
+
+      <div className="row">
+        <input type="submit" value="Send for Approval" disabled={!isCheckboxChecked} onChange={handleSubmit}></input>
       </div>
     </form>
   </div> 
