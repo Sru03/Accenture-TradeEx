@@ -170,7 +170,7 @@ const TradieRegisterationPage = () => {
 
       <div>
           <p className='linkback'>Not a tradie? </p>
-          <a href='/register-user' className='link_to_user'>Register as a User</a>
+          <a href='/register-customer' className='link_to_user'>Register as a User</a>
       </div>
       
     <form action="action_page.php" onSubmit={handleSubmit}>
