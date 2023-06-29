@@ -3,8 +3,9 @@ import SearchBar from "../components/SearchBar";
 import JobList from "../components/JobList";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../Firebase.config";
-import { FiFilter } from "react-icons/fi";
+import { FaChevronDown } from "react-icons/fa";
 import FilterPopup from "../components/FilterPopup";
+
 
 const MarketPlace = () => {
   const [jobs, setJobs] = useState([]);
@@ -35,9 +36,9 @@ const MarketPlace = () => {
       <div className="filter-container">
           <FilterPopup trigger={true}>
             <h3> Select Filters </h3>
-            <p> Location </p>
-            <p> Price </p>
-            <p> Tradie Category </p>
+            <p> Location <FaChevronDown /></p>
+            <p> Price <FaChevronDown /></p>
+            <p> Tradie Category <FaChevronDown /> </p>
           </FilterPopup>
         </div>
       
