@@ -44,6 +44,7 @@ body{
   -webkit-animation: Animation 5s ease infinite;
   -moz-animation: Animation 5s ease infinite;
   animation: Animation 5s ease infinite;*/
+  font-family: 'Josefin Sans';font-size: 22px;
 }
 
 .header-container {
@@ -197,12 +198,17 @@ ul{
   border-radius: 10px;
 }
 
-
 .search-tradie {
   display: flex;
   /* justify-content: center; */
   margin-top: 50px;
   margin-left: 80px;
+}
+
+.search-tradie .search-icon {
+  color: white;
+  margin-right: 10px;
+  padding: 15px;
 }
 
 .search-tradie input[type="search"] {
@@ -216,15 +222,16 @@ ul{
 }
 
 .search-tradie button {
-  padding: 10px 20px;
+  padding: 0px 30px;
   border-radius: 20px;
   border: none;
   background-color: #14213D;
   color: #FFF;
   font-weight: bold;
-  font-size: large;
   margin-left: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid white;
 }
 
 .post-job {
@@ -246,17 +253,17 @@ ul{
 }
 
 .tradie-container {
-  display : flex;
-  flex-wrap : wrap;
+  display: flex;
+  flex-wrap: wrap;
   padding: 10px;
   margin: 60px;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 .tradie-item {
-  padding : 20px;
+  padding: 20px;
+  width: 200px;
   background-color: white;
   border-radius: 20px;
 

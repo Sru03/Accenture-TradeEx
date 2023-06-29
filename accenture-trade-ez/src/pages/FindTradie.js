@@ -3,9 +3,6 @@ import TradieList from "../components/TradieList";
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../Firebase.config'
 
-
-
-
 const FindTradie = () => {
   const [tradie, setTradie] = useState([])
 
@@ -19,10 +16,14 @@ const FindTradie = () => {
     fetchData();
 
   },[]);
+  
   return (
     <>
       <div className="search-tradie">
-        <input type="search" placeholder="    What type of tradie are you looking for?" />
+        <span className="search-icon">
+          <i className="fas fa-search"></i>
+        </span>
+        <input type="search" placeholder=" What type of tradie are you looking for?" />
         <button>Search</button>
         <div className='post-job'>
         <button>POST A JOB</button>
