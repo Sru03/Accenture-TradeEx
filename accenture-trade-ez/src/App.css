@@ -322,6 +322,10 @@ input[type=submit] {
   color: orange;
 }
 
+.disabled {
+  opacity: 0.5; /* Adjust the opacity value to control the level of gray-out effect */
+  cursor: not-allowed;
+}
 
 
 

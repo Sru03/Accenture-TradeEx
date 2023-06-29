@@ -34,6 +34,7 @@ const TradieRegisterationPage = () => {
   
 
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
+  const [disabled, setDisabled] = useState(true);
 
   const handleFirstNameChange = (e) => {
     const { value } = e.target;
@@ -132,6 +133,10 @@ const TradieRegisterationPage = () => {
 
   const handleCityChange = (e) => {
     setSelectedCity(e.target.value);
+  };
+
+  const handleFormValidity = (isValid) => {
+    setDisabled(!isValid);
   };
 
   const handleSubmit = (e) => {
@@ -312,7 +317,7 @@ const TradieRegisterationPage = () => {
       </div>
 
       <div className="row">
-        <input type="submit" value="Send for Approval" disabled={!isCheckboxChecked} onChange={handleSubmit}></input>
+        <input type="submit" value="Send for Approval" className={disabled ? "disabled" : ""} disabled={disabled} onChange={handleSubmit}></input>
       </div>
     </form>
   </div> 
