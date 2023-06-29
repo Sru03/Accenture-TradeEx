@@ -52,8 +52,7 @@ function JobList({ jobs }) {
               <p
                 style={{
                   border: "1px solid black",
-                  borderRadius: "10px",
-                  width: "100%",
+                  borderRadius: "20px",
                   padding: "10px",
                 }}
               >
