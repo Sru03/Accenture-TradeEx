@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CustomerRegistrationPage = () => {
+
+    const navigation = useNavigate();
 
     const [firstname, setFirstName] = useState('');
     const [lastname, setLastName] = useState('');
@@ -106,7 +109,7 @@ const CustomerRegistrationPage = () => {
         return;
         }
 
-        alert('Form submitted successfully');
+        navigation('/');
         return;
     };
 
