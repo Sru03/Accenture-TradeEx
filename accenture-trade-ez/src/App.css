@@ -44,6 +44,8 @@ body{
   -webkit-animation: Animation 5s ease infinite;
   -moz-animation: Animation 5s ease infinite;
   animation: Animation 5s ease infinite;*/
+  font-family: 'Josefin Sans';
+  font-size: 22px;
 }
 
 .header-container {
@@ -144,6 +146,7 @@ ul{
   justify-content: center;
   margin-top: 50px;
   margin-left: 60px;
+  
 }
 
 .search-bar input[type="search"] {
@@ -152,6 +155,7 @@ ul{
   border-radius: 20px;
   border: none;
   position: relative;
+  font-family: 'Josefin Sans';
 }
 
 .search-bar .search-icon {
@@ -188,7 +192,6 @@ ul{
   padding : 20px;
   background-color: white;
   border-radius: 20px;
-
 
 }
 
@@ -377,3 +380,69 @@ input[type=submit] {
 
 
 
+.search-tradie .search-icon {
+  color: white;
+  margin-right: 10px;
+  padding: 15px;
+}
+
+.search-tradie input[type="search"] {
+  width: 700px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the width as needed */
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  font-size: large;
+  font-weight: bold;
+  font-family: 'Josefin Sans';
+}
+
+.search-tradie button {
+  padding: 0px 30px;
+  border-radius: 20px;
+  border: none;
+  background-color: #14213D;
+  color: #FFF;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid white;
+}
+
+.post-job {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 160px;
+}
+
+.post-job button {
+  width: 250px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the width as needed */
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: none;
+  background-color: #FFF;
+  color: #282c34;
+  font-size: large;
+  font-weight: bold;
+  margin-right: 100px;
+}
+
+.tradie-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 60px;
+  gap: 12rem;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+}
+
+.tradie-item {
+  padding: 20px;
+  width: 200px;
+  background-color: white;
+  border-radius: 20px;
+
+}
