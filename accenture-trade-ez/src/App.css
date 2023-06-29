@@ -48,7 +48,6 @@ body{
   -webkit-animation: Animation 5s ease infinite;
   -moz-animation: Animation 5s ease infinite;
   animation: Animation 5s ease infinite;*/
-  font-family: 'Josefin Sans';
   font-size: 22px;
 }
 
@@ -99,7 +98,6 @@ body{
 .navbar-link:hover::before {
   background-color: #FFF;
 }
-
 
 .logo-container {
   margin-left: 20px;
@@ -159,7 +157,6 @@ ul{
   border-radius: 20px;
   border: none;
   position: relative;
-  font-family: 'Josefin Sans';
 }
 
 .search-bar .search-icon {
