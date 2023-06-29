@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'; // Import the HomePage component
 import './App.css';
 import FindTradie from './pages/FindTradie';
+import Register from './pages/Register';
 import MarketPlace from './pages/MarketPlace';
 import Navbar from './components/Navbar'
 import TradieRegisterationPage from './pages/TradieRegisteration';
