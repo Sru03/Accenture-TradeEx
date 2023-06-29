@@ -44,7 +44,8 @@ body{
   -webkit-animation: Animation 5s ease infinite;
   -moz-animation: Animation 5s ease infinite;
   animation: Animation 5s ease infinite;*/
-  font-family: 'Josefin Sans';font-size: 22px;
+  font-family: 'Josefin Sans';
+  font-size: 22px;
 }
 
 .header-container {
@@ -145,6 +146,7 @@ ul{
   justify-content: center;
   margin-top: 50px;
   margin-left: 60px;
+  
 }
 
 .search-bar input[type="search"] {
@@ -153,6 +155,7 @@ ul{
   border-radius: 20px;
   border: none;
   position: relative;
+  font-family: 'Josefin Sans';
 }
 
 .search-bar .search-icon {
@@ -250,6 +253,7 @@ ul{
   color: #282c34;
   font-size: large;
   font-weight: bold;
+  margin-right: 100px;
 }
 
 .tradie-container {
@@ -257,8 +261,9 @@ ul{
   flex-wrap: wrap;
   padding: 10px;
   margin: 60px;
-  align-items: center;
-  justify-content: space-between;
+  gap: 12rem;
+  /* align-items: center; */
+  /* justify-content: space-between; */
 }
 
 .tradie-item {
