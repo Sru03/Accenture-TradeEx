@@ -25,7 +25,7 @@ const MarketPlace = () => {
 
   return (
     <div>
-      <p>Market Place</p>
+    
       <div className="market-place-search-bar">
         <SearchBar />
 
@@ -36,6 +36,8 @@ const MarketPlace = () => {
             borderRadius: "10px",
             fontWeight: "lighter",
             fontSize: "50px",
+            padding : "3px",
+            margin : " 50px"
           }}
         />
 
