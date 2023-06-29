@@ -5,8 +5,8 @@ import FindTradie from './pages/FindTradie';
 import Register from './pages/Register';
 import MarketPlace from './pages/MarketPlace';
 import Navbar from './components/Navbar'
-import TradieRegisterationPage from './pages/TradieRegisteration';
-import CustomerRegisterationPage from './pages/CustomerRegisteration';
+import TradieRegistrationPage from './pages/TradieRegistration';
+import CustomerRegistrationPage from './pages/CustomerRegistration';
 
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
             <Route path="/" element={<HomePage/>} />
             <Route path="/marketplace" element={<MarketPlace/>} />
             <Route path="/find-tradie" element={<FindTradie />} />
-            <Route path="/register-tradie" element={<TradieRegisterationPage />} />
-            <Route path="/register-customer" element={<CustomerRegisterationPage />} />
+            <Route path="/register-tradie" element={<TradieRegistrationPage />} />
+            <Route path="/register-customer" element={<CustomerRegistrationPage />} />
             <Route path="/register" element={<Register />} />
             <Route path="/*" element={<></>} />
         </Routes>

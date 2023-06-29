@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FileUpload from '../components/FileUpload';
 
-const TradieRegisterationPage = () => {
+const TradieRegistrationPage = () => {
 
   const trade_types = [
     { key: 'Carpenter', id: 1 },
@@ -309,4 +309,4 @@ const TradieRegisterationPage = () => {
   );
 }
 
-export default TradieRegisterationPage;
+export default TradieRegistrationPage;

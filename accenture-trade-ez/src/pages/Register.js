@@ -9,6 +9,9 @@ const HomePage = () => {
   const handleTradieRegistration = () => {
     navigation('/register-tradie');
   };
+  const handleUserRegistration = () => {
+    navigation('/register-customer');
+  };
 
   return (
     <div>
@@ -30,7 +33,7 @@ const HomePage = () => {
 
       {/* Button boxes */}
       <div className="sign-up-button-container">
-        <button className="register-user-button" /*</div>onClick={handleUserRegistration}*/>
+        <button className="register-user-button" onClick={handleUserRegistration}>
           <i><p>Need a job done?</p></i>
           <i><p className="second-line">Register as a <b>user</b></p></i>
         </button>

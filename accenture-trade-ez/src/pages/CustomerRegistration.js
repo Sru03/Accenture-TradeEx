@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CustomerRegisterationPage = () => {
+const CustomerRegistrationPage = () => {
 
     const [firstname, setFirstName] = useState('');
     const [lastname, setLastName] = useState('');
@@ -215,4 +215,4 @@ const CustomerRegisterationPage = () => {
       );
 };
 
-export default CustomerRegisterationPage;
+export default CustomerRegistrationPage;
