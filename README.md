@@ -53,6 +53,7 @@ The final day of the bootcamp involves bringing this all together into a final p
 | Elisa        | Ehsaas   |
 | Euan         | Jacob    |
 | Hammad       | Jonathan |
-| Nancy        | Naera    |
+| Mick         | Naera    |
+| Nancy        |
 | Sebastian    |
 | Srushti      |
