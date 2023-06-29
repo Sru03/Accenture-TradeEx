@@ -722,3 +722,54 @@ input[type=submit] {
   border-radius: 20px;
 
 }
+
+/* .readonly-textbox {
+  text-align-last: center;
+  border-radius: 8px;
+  max-width: 710px;
+  height: 230px;
+  background-color: white;
+  color: #14213D;
+  font-family: 'Josefin Sans';
+  font-size: 28px;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.section-container {
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textbox-container{
+  width: 500px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #14213D;
+  font-family: 'Josefin Sans';
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.other-textbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Josefin Sans';
+  padding-top: 500px;
+}

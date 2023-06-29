@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import FileUpload from '../components/FileUpload';
+import { useNavigate } from 'react-router-dom';
 
 const TradieRegistrationPage = () => {
+
+  const navigation = useNavigate();
 
   const trade_types = [
     { key: 'Carpenter', id: 1 },
@@ -158,7 +161,7 @@ const TradieRegistrationPage = () => {
     return;
   }
 
-  alert('Form submitted successfully');
+  navigation('/tradie-success');
   return;
   };
 

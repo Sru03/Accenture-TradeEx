@@ -7,6 +7,7 @@ import MarketPlace from './pages/MarketPlace';
 import Navbar from './components/Navbar'
 import TradieRegistrationPage from './pages/TradieRegistration';
 import CustomerRegistrationPage from './pages/CustomerRegistration';
+import TradieFormSubmission from './pages/TradieFormSubmission';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/find-tradie" element={<FindTradie />} />
             <Route path="/register-tradie" element={<TradieRegistrationPage />} />
             <Route path="/register-customer" element={<CustomerRegistrationPage />} />
+            <Route path="/tradie-success" element={<TradieFormSubmission />} />
             <Route path="/register" element={<Register />} />
             <Route path="/*" element={<></>} />
         </Routes>
