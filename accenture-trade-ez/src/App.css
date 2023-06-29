@@ -37,12 +37,26 @@
   }
 }
 
+::-webkit-scrollbar {
+  height: 0px;
+  width: 10px;
+  background: #999999;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  -webkit-border-radius: 1ex;
+}
+
 * {
   font-family: "Josefin Sans";
 }
 
 h2 {
   font-family: "Nova Flat";
+  font-size: 26px;
+  margin-top: 0px;
+  font-weight: 100;
 }
 
 h2 > span {
@@ -163,10 +177,11 @@ ul {
 
 .search-bar input[type="search"] {
   width: 700px; /* Adjust the width as needed */
-  padding: 10px;
-  border-radius: 20px;
+  padding: 15px;
+  border-radius: 30px;
   border: none;
   position: relative;
+  font-size: 22px;
 }
 
 .search-bar .search-icon {
@@ -175,8 +190,9 @@ ul {
 }
 
 .search-bar button {
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 15px 30px;
+  border-radius: 40px;
+  font-size: 22px;
   border: none;
   background-color: #14213d;
   color: #fff;
@@ -185,6 +201,11 @@ ul {
   cursor: pointer;
   transition: background-color 0.3s ease;
   border: 2px solid white;
+}
+
+.search-bar button:hover {
+  background-color: white;
+  color: #14213d;
 }
 
 .sign-up-button-container {
@@ -198,7 +219,7 @@ ul {
 .register-tradie-button {
   background-color: #fff;
   width: 400px;
-  color: #000;
+  color: #14213d;
   border: none;
   border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -214,6 +235,10 @@ ul {
 
 .existing-acc {
   color: white;
+}
+
+.existing-acc > p > b > i {
+  font-weight: 100;
 }
 
 .second-line {
@@ -243,17 +268,15 @@ ul {
 }
 
 .search-jobs {
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   margin-top: 50px;
   margin-left: 80px;
 }
 
 .filter-popup {
- position: absolute;
- margin-left: 80%;
- 
-
+  position: absolute;
+  margin-left: 80%;
 }
 
 /* .textbox-container {
@@ -441,23 +464,26 @@ input[type="submit"] {
   width: 700px; /* Adjust the width as needed */
   height: 50px; /* Adjust the width as needed */
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 40px;
   border: none;
   font-size: large;
-  font-weight: bold;
 }
 
 .search-tradie button {
   padding: 0px 30px;
-  border-radius: 20px;
-  border: none;
+  border-radius: 40px;
   background-color: #14213d;
   color: #fff;
-  font-weight: bold;
   margin-left: 10px;
+  font-size: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   border: 2px solid white;
+}
+
+.search-tradie button:hover {
+  background-color: white;
+  color: #14213d;
 }
 
 .post-job {
@@ -474,8 +500,8 @@ input[type="submit"] {
   border: none;
   background-color: #fff;
   color: #282c34;
-  font-size: large;
   font-weight: bold;
+  font-size: 20px;
   margin-right: 100px;
 }
 
@@ -498,7 +524,7 @@ input[type="submit"] {
 
 .filter-popup-inner {
   position: relative;
-  padding : 32px;
+  padding: 32px;
   top: 10px;
   left: 20px;
   width: 100%;
@@ -678,61 +704,6 @@ input[type="submit"] {
   color: orange;
 }
 
-.search-tradie {
-  display: flex;
-
-  margin-top: 50px;
-  margin-left: 80px;
-}
-
-.search-tradie .search-icon {
-  color: white;
-  margin-right: 10px;
-  padding: 15px;
-}
-
-.search-tradie input[type="search"] {
-  width: 700px; /* Adjust the width as needed */
-  height: 50px; /* Adjust the width as needed */
-  padding: 10px;
-  border-radius: 20px;
-  border: none;
-  font-size: large;
-  font-weight: bold;
-}
-
-.search-tradie button {
-  padding: 0px 30px;
-  border-radius: 20px;
-  border: none;
-  background-color: #14213d;
-  color: #fff;
-  font-weight: bold;
-  margin-left: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: 2px solid white;
-}
-
-.post-job {
-  display: flex;
-  justify-content: flex-end;
-  margin-left: 160px;
-}
-
-.post-job button {
-  width: 250px; /* Adjust the width as needed */
-  height: 50px; /* Adjust the width as needed */
-  padding: 10px 20px;
-  border-radius: 40px;
-  border: none;
-  background-color: #fff;
-  color: #282c34;
-  font-size: large;
-  font-weight: bold;
-  margin-right: 100px;
-}
-
 .tradie-container {
   display: flex;
   flex-wrap: wrap;
@@ -751,7 +722,6 @@ input[type="submit"] {
 }
 
 .filter-container {
-
-justify-content: end;
-align-items: end;
+  justify-content: end;
+  align-items: end;
 }

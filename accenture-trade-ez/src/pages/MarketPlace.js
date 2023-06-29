@@ -6,7 +6,6 @@ import { db } from "../Firebase.config";
 import { FaChevronDown } from "react-icons/fa";
 import FilterPopup from "../components/FilterPopup";
 
-
 const MarketPlace = () => {
   const [jobs, setJobs] = useState([]);
 
@@ -22,27 +21,38 @@ const MarketPlace = () => {
 
   return (
     <>
-
-<div className="search-tradie">
+      <div className="search-tradie">
         <span className="search-icon">
           <i className="fas fa-search"></i>
         </span>
-        <input type="search" placeholder=" What type of tradie are you looking for?" />
+        <input
+          type="search"
+          placeholder="What type of job are you looking for?"
+        />
         <button>Search</button>
-        <div className='post-job'>
-        <button>POST A JOB</button>
+        <div className="post-job">
+          <button>Post a Job</button>
         </div>
       </div>
       <div className="filter-container">
-          <FilterPopup trigger={true}>
-            <h3> Select Filters </h3>
-            <p> Location <FaChevronDown /></p>
-            <p> Price <FaChevronDown /></p>
-            <p> Tradie Category <FaChevronDown /> </p>
-          </FilterPopup>
-        </div>
-      
-      <div style = {{ marginTop : "300px"}}>
+        <FilterPopup trigger={true}>
+          <h3> Select Filters </h3>
+          <p>
+            {" "}
+            Location <FaChevronDown />
+          </p>
+          <p>
+            {" "}
+            Price <FaChevronDown />
+          </p>
+          <p>
+            {" "}
+            Tradie Category <FaChevronDown />{" "}
+          </p>
+        </FilterPopup>
+      </div>
+
+      <div style={{ marginTop: "300px" }}>
         <JobList jobs={jobs} />
       </div>
     </>
