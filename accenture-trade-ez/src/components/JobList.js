@@ -54,6 +54,7 @@ function JobList({ jobs }) {
                   border: "1px solid black",
                   borderRadius: "10px",
                   width: "100%",
+                  padding: "10px",
                 }}
               >
                 {" "}

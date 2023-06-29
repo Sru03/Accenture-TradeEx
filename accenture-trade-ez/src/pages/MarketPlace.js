@@ -34,7 +34,7 @@ const MarketPlace = () => {
           <button>Post a Job</button>
         </div>
       </div>
-      {/* <div className="filter-container">
+      <div className="filter-container">
         <FilterPopup trigger={true}>
           <h3> Select Filters </h3>
           <p>
@@ -50,7 +50,7 @@ const MarketPlace = () => {
             Tradie Category <FaChevronDown />{" "}
           </p>
         </FilterPopup>
-      </div> */}
+      </div>
 
       <div style={{ marginTop: "10px" }}>
         <JobList jobs={jobs} />
