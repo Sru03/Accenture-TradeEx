@@ -3,8 +3,9 @@ import SearchBar from "../components/SearchBar";
 import JobList from "../components/JobList";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../Firebase.config";
-import { FiFilter } from "react-icons/fi";
+import { FaChevronDown } from "react-icons/fa";
 import FilterPopup from "../components/FilterPopup";
+
 
 const MarketPlace = () => {
   const [jobs, setJobs] = useState([]);
@@ -19,36 +20,32 @@ const MarketPlace = () => {
     fetchData();
   }, []);
 
-  const handleFilterClick = () => {
-    console.log("Clicked on Filter");
-  };
-
   return (
-    <div>
-      <p>Market Place</p>
-      <div className="market-place-search-bar">
-        <SearchBar />
+    <>
 
-        <FiFilter
-          onClick={handleFilterClick}
-          style={{
-            backgroundColor: "white",
-            borderRadius: "10px",
-            fontWeight: "lighter",
-            fontSize: "50px",
-          }}
-        />
-
-        <FilterPopup trigger={false}>
-          <h3> My Popup</h3>
-          <p> Select Filters </p>
-          <p> Experience</p>
-          <p> Reviews </p>
-        </FilterPopup>
+<div className="search-tradie">
+        <span className="search-icon">
+          <i className="fas fa-search"></i>
+        </span>
+        <input type="search" placeholder=" What type of tradie are you looking for?" />
+        <button>Search</button>
+        <div className='post-job'>
+        <button>POST A JOB</button>
+        </div>
       </div>
-
-      <JobList jobs={jobs} />
-    </div>
+      <div className="filter-container">
+          <FilterPopup trigger={true}>
+            <h3> Select Filters </h3>
+            <p> Location <FaChevronDown /></p>
+            <p> Price <FaChevronDown /></p>
+            <p> Tradie Category <FaChevronDown /> </p>
+          </FilterPopup>
+        </div>
+      
+      <div style = {{ marginTop : "300px"}}>
+        <JobList jobs={jobs} />
+      </div>
+    </>
   );
 };
 

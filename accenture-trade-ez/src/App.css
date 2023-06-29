@@ -38,11 +38,19 @@
 }
 
 * {
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
 }
 
-body{
-  background-color: #14213D;
+h2 {
+  font-family: "Nova Flat";
+}
+
+h2 > span {
+  font-family: "Nova Flat";
+}
+
+body {
+  background-color: #14213d;
   /*background: linear-gradient(90deg, #000000, #3533cd);
   background-size: 200% 200%;
   -webkit-animation: Animation 5s ease infinite;
@@ -56,7 +64,7 @@ body{
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
-  border-bottom: 4px solid #FFF;
+  border-bottom: 4px solid #fff;
 }
 
 .navbar {
@@ -77,7 +85,7 @@ body{
 }
 
 .navbar-link {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   font-size: 26px;
   font-weight: bold;
@@ -96,14 +104,17 @@ body{
 }
 
 .navbar-link:hover::before {
-  background-color: #FFF;
+  background-color: #fff;
+}
+
+.navbar-link:active {
 }
 
 .logo-container {
   margin-left: 20px;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
@@ -137,7 +148,7 @@ ul{
   color: orange;
 }
 
-.slogan{
+.slogan {
   color: #fff;
   margin: 0 auto;
 }
@@ -148,7 +159,6 @@ ul{
   justify-content: center;
   margin-top: 50px;
   margin-left: 60px;
-  
 }
 
 .search-bar input[type="search"] {
@@ -168,8 +178,8 @@ ul{
   padding: 10px 20px;
   border-radius: 20px;
   border: none;
-  background-color: #14213D;
-  color: #FFF;
+  background-color: #14213d;
+  color: #fff;
   font-weight: bold;
   margin-left: 10px;
   cursor: pointer;
@@ -186,20 +196,20 @@ ul{
 
 .register-user-button,
 .register-tradie-button {
-  background-color: #FFF;
+  background-color: #fff;
   width: 400px;
   color: #000;
   border: none;
-  border-radius: 20px; 
+  border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  font-size: 24px; 
-  transition: background-color 0.3s ease; 
+  font-size: 24px;
+  transition: background-color 0.3s ease;
 }
 
 .register-user-button:hover,
 .register-tradie-button:hover {
-  background-color: #F6F6F6; 
-  cursor: pointer; 
+  background-color: #f6f6f6;
+  cursor: pointer;
 }
 
 .existing-acc {
@@ -211,55 +221,41 @@ ul{
 }
 
 .job-container {
-
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
   margin: 60px;
   gap: 12rem;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
-  
 }
 
 .job-item {
-
   padding: 20px;
   width: 200px;
   background-color: white;
   border-radius: 20px;
-
 }
 
 .border {
-
   border-color: black;
   border-radius: 10px;
 }
 
-.market-place-search-bar {
- 
-  display: flex; 
-  flex-wrap:  wrap;
-   justify-content: center;
+.search-jobs {
+  justify-content: center; 
   align-items: center;
-
-
+  margin-top: 50px;
+  margin-left: 80px;
 }
-
 
 .filter-popup {
- position: fixed;
- top: 300;
- left: 30;
- width: 100%;
- height: 350px;
- display: flex;
- border-radius: 10px;
- justify-content: space-between;
- align-items: end;
-}
+ position: absolute;
+ margin-left: 80%;
  
+
+}
+
 /* .textbox-container {
   place-items: left;
 }
@@ -273,14 +269,12 @@ ul{
 .register-page-heading {
   display: flex;
   text-align: left;
-  font-family: 'Josefin Sans';
   font-weight: bold;
   font-size: 38.75px;
 }
 
 .linkback {
   display: inline;
-  font-family: 'Josefin Sans';
   font-size: 24.01px;
   font-style: italic;
 }
@@ -303,13 +297,14 @@ ul{
 
 .textbox-heading{
   text-align: left;
-  font-family: 'Josefin Sans';
   font-size: 26.9px;
   margin-left: auto;
 } */
 
- /* Style inputs, select elements and textareas */
- input[type=text], select, textarea{
+/* Style inputs, select elements and textareas */
+input[type="text"],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -322,21 +317,19 @@ ul{
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
-  color: #FFF;
-  font-family: 'Josefin Sans';
+  color: #fff;
   font-size: 26.9px;
 }
 
 /* Style the submit button */
-input[type=submit] {
-  background-color: #FCA311;
+input[type="submit"] {
+  background-color: #fca311;
   color: black;
   padding: 12px 20px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   justify-content: center;
-  font-family: 'Josefin Sans';
   font-size: 27px;
   margin-top: 50px;
 }
@@ -344,7 +337,7 @@ input[type=submit] {
 /* Style the container */
 .container {
   border-radius: 5px;
-  background-color: #14213D;
+  background-color: #14213d;
   padding: 30px;
   margin-left: 200px;
 }
@@ -372,57 +365,60 @@ input[type=submit] {
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
     width: 100%;
     margin-top: 0;
   }
-} 
+}
 
 .page-heading {
   display: inline;
   text-align: left;
-  font-family: 'Josefin Sans';
   font-weight: bold;
   font-size: 38.75px;
-  color: #FFF;
+  color: #fff;
 }
 
 .section-heading {
   display: flex;
   text-align: left;
-  font-family: 'Josefin Sans';
   font-weight: bold;
   font-size: 26.9px;
-  color: #FFF;
+  color: #fff;
   margin-top: 70px;
+}
+
+.error input {
+  border: 3px solid red;
+}
+
+.error-message {
+  color: red;
 }
 
 .findCurrentLocation {
   text-align: left;
-  font-family: 'Josefin Sans';
   font-size: 24.01px;
   color: orange;
 }
 
 .filetext {
   text-align: center;
-  font-family: 'Josefin Sans';
   font-size: 15px;
   color: white;
 }
 
 .linkback {
   display: inline;
-  font-family: 'Josefin Sans';
   font-size: 24.01px;
   font-style: italic;
-  color: #FFF;
-
+  color: #fff;
 }
 
 .link_to_user {
   display: inline;
-  font-family: 'Josefin Sans';
   font-size: 24.01px;
   font-style: italic;
   color: orange;
@@ -449,15 +445,14 @@ input[type=submit] {
   border: none;
   font-size: large;
   font-weight: bold;
-  font-family: 'Josefin Sans';
 }
 
 .search-tradie button {
   padding: 0px 30px;
   border-radius: 20px;
   border: none;
-  background-color: #14213D;
-  color: #FFF;
+  background-color: #14213d;
+  color: #fff;
   font-weight: bold;
   margin-left: 10px;
   cursor: pointer;
@@ -477,7 +472,7 @@ input[type=submit] {
   padding: 10px 20px;
   border-radius: 40px;
   border: none;
-  background-color: #FFF;
+  background-color: #fff;
   color: #282c34;
   font-size: large;
   font-weight: bold;
@@ -499,28 +494,69 @@ input[type=submit] {
   width: 200px;
   background-color: white;
   border-radius: 20px;
-
 }
 
 .filter-popup-inner {
-
   position: relative;
   padding : 32px;
+  top: 10px;
+  left: 20px;
   width: 100%;
   max-width: 640px;
   background-color: white;
 }
 
 .filter-popup-inner .close-btn {
- 
   position: absolute;
   top: 16px;
-  right : 16px;
-
+  right: 16px;
 }
 
- /* Style inputs, select elements and textareas */
- input[type=text], select, textarea{
+.page-heading-container {
+  display: flex;
+  gap: 100px;
+  color: #fff;
+}
+
+.register-page-heading {
+  display: flex;
+  text-align: left;
+  font-weight: bold;
+  font-size: 38.75px;
+}
+
+.linkback {
+  display: inline;
+  font-size: 24.01px;
+  font-style: italic;
+}
+
+.linkback a {
+  color: #fca311;
+}
+
+.rounded-textbox {
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.container {
+  margin-left: 100px;
+}
+
+.textbox-heading {
+  text-align: left;
+  font-size: 26.9px;
+  margin-left: auto;
+}
+*/
+
+/* Style inputs, select elements and textareas */
+input[type="text"],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -533,21 +569,19 @@ input[type=submit] {
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
-  color: #FFF;
-  font-family: 'Josefin Sans';
+  color: #fff;
   font-size: 26.9px;
 }
 
 /* Style the submit button */
-input[type=submit] {
-  background-color: #FCA311;
+input[type="submit"] {
+  background-color: #fca311;
   color: black;
   padding: 12px 20px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   justify-content: center;
-  font-family: 'Josefin Sans';
   font-size: 27px;
   margin-top: 50px;
 }
@@ -555,7 +589,7 @@ input[type=submit] {
 /* Style the container */
 .container {
   border-radius: 5px;
-  background-color: #14213D;
+  background-color: #14213d;
   padding: 30px;
   margin-left: 200px;
 }
@@ -583,67 +617,62 @@ input[type=submit] {
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
     width: 100%;
     margin-top: 0;
   }
-} 
+}
 
 .page-heading {
   display: inline;
   text-align: left;
-  font-family: 'Josefin Sans';
   font-weight: bold;
   font-size: 38.75px;
-  color: #FFF;
+  color: #fff;
 }
 
 .section-heading {
   display: flex;
   text-align: left;
-  font-family: 'Josefin Sans';
   font-weight: bold;
   font-size: 26.9px;
-  color: #FFF;
+  color: #fff;
   margin-top: 70px;
 }
 
-.error input{
+.error input {
   border: 3px solid red;
 }
 
 .error-message {
   color: red;
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   font-size: 15px;
 }
 
 .findCurrentLocation {
   text-align: left;
-  font-family: 'Josefin Sans';
   font-size: 24.01px;
   color: orange;
 }
 
 .filetext {
   text-align: center;
-  font-family: 'Josefin Sans';
   font-size: 15px;
   color: white;
 }
 
 .linkback {
   display: inline;
-  font-family: 'Josefin Sans';
   font-size: 24.01px;
   font-style: italic;
-  color: #FFF;
-
+  color: #fff;
 }
 
 .link_to_user {
   display: inline;
-  font-family: 'Josefin Sans';
   font-size: 24.01px;
   font-style: italic;
   color: orange;
@@ -651,7 +680,7 @@ input[type=submit] {
 
 .search-tradie {
   display: flex;
-  /* justify-content: center; */
+
   margin-top: 50px;
   margin-left: 80px;
 }
@@ -670,15 +699,14 @@ input[type=submit] {
   border: none;
   font-size: large;
   font-weight: bold;
-  font-family: 'Josefin Sans';
 }
 
 .search-tradie button {
   padding: 0px 30px;
   border-radius: 20px;
   border: none;
-  background-color: #14213D;
-  color: #FFF;
+  background-color: #14213d;
+  color: #fff;
   font-weight: bold;
   margin-left: 10px;
   cursor: pointer;
@@ -698,7 +726,7 @@ input[type=submit] {
   padding: 10px 20px;
   border-radius: 40px;
   border: none;
-  background-color: #FFF;
+  background-color: #fff;
   color: #282c34;
   font-size: large;
   font-weight: bold;
@@ -711,8 +739,8 @@ input[type=submit] {
   padding: 10px;
   margin: 60px;
   gap: 12rem;
-  align-items: center; 
-  justify-content: center;  
+  align-items: center;
+  justify-content: center;
 }
 
 .tradie-item {
@@ -720,25 +748,13 @@ input[type=submit] {
   width: 200px;
   background-color: white;
   border-radius: 20px;
-
 }
 
-/* .readonly-textbox {
-  text-align-last: center;
-  border-radius: 8px;
-  max-width: 710px;
-  height: 230px;
-  background-color: white;
-  color: #14213D;
-  font-family: 'Josefin Sans';
-  font-size: 28px;
-  border: none;
-  outline: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
+.filter-container {
+
+justify-content: end;
+align-items: end;
+}
 
 .section-container {
   height: 230px;
