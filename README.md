@@ -1,6 +1,6 @@
 # TradeEz
 
-![TradeEz-logo](accenture-trade-ez/public/TradeEz-logo.png)
+<img src="accenture-trade-ez/public/TradeEz-logo-dark.png" alt="TradeEz-logo" width="150">
 
 TradeEz is an online marketplace where the everyday person can hire a tradesperson for their everyday needs.
 
@@ -38,7 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Accenture NZ Technology Bootcamp 2023
 
-![Accenture-logo](accenture-trade-ez/public/Accenture-Logo.png)
+<img src="accenture-trade-ez/public/Accenture-black-Logo.png" alt="Accenture-logo" width="150"/>
 
 This app was created as a part of Accenture New Zealand's Technology Bootcamp 2023.
 
