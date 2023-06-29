@@ -725,3 +725,37 @@ input[type="submit"] {
   justify-content: end;
   align-items: end;
 }
+
+.section-container {
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textbox-container {
+  width: 500px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #14213d;
+  font-family: "Josefin Sans";
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.other-textbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Josefin Sans";
+  padding-top: 500px;
+}
