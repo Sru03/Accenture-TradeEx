@@ -140,6 +140,7 @@ const TradieRegisterationPage = () => {
   };
 
   const handleSubmit = (e) => {
+    console.log("button triggered");
     e.preventDefault();
 
   // Check for errors
@@ -157,24 +158,8 @@ const TradieRegisterationPage = () => {
     return;
   }
 
-    // const formData = new FormData();
-    // formData.append('name', name);
-    // formData.append('email', email);
-    // formData.append('pdf', pdfFile);
-
-    // fetch('/register', {
-    //   method: 'POST',
-    //   body: formData,
-    // })
-    //   .then((response) => response.text())
-    //   .then((message) => {
-    //     console.log(message);
-    //     // Show success message to the user
-    //   })
-    //   .catch((error) => {
-    //     console.error('Error:', error);
-    //     // Show error message to the user
-    //   });
+  alert('Form submitted successfully');
+  return;
   };
 
   return (
@@ -260,7 +245,7 @@ const TradieRegisterationPage = () => {
           <label for="phone">Phone Number</label>
         </div>
         <div className="col-75">
-          <input type="text" id="phone" name="phone" required></input>
+          <input type="text" id="phone" name="phone" pattern="[0-9]+" title="Please enter a valid phone number" required></input>
         </div>
       </div>
       <div className="row">
@@ -317,7 +302,7 @@ const TradieRegisterationPage = () => {
       </div>
 
       <div className="row">
-        <input type="submit" value="Send for Approval" className={disabled ? "disabled" : ""} disabled={disabled} onChange={handleSubmit}></input>
+        <input type="submit" value="Send for Approval" onChange={handleSubmit}></input>
       </div>
     </form>
   </div> 

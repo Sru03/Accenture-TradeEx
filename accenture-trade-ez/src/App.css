@@ -222,9 +222,10 @@ input[type=submit] {
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  float: right;
+  justify-content: center;
   font-family: 'Josefin Sans';
   font-size: 27px;
+  margin-top: 50px;
 }
 
 /* Style the container */
@@ -320,11 +321,6 @@ input[type=submit] {
   font-size: 24.01px;
   font-style: italic;
   color: orange;
-}
-
-.disabled {
-  opacity: 0.5; /* Adjust the opacity value to control the level of gray-out effect */
-  cursor: not-allowed;
 }
 
 
