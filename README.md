@@ -38,7 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Accenture NZ Technology Bootcamp 2023
 
-<img src="accenture-trade-ez/public/Accenture-black-Logo.png" alt="Accenture-logo" width="150"/>
+<img src="accenture-trade-ez/public/Accenture-black-logo.png" alt="Accenture-logo" width="150"/>
 
 This app was created as a part of Accenture New Zealand's Technology Bootcamp 2023.
 
