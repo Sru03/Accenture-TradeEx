@@ -25,11 +25,28 @@ function FileInput() {
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
-    if (file) {
-      setFileName(file.name);
-      // Handle the selected file here
-      console.log('Selected file:', file);
+    
+    // Check if no file is selected
+    if (!file) {
+      alert('Please select a file');
+      setFileName(null);
+      return;
     }
+
+    // Check if the file is a PDF
+    if (file.type !== 'application/pdf') {
+      alert('Please upload a PDF file');
+      setFileName(null);
+      return;
+    }
+    
+    setFileName(file.name);
+    
+    // if (file) {
+    //   setFileName(file.name);
+    //   // Handle the selected file here
+    //   console.log('Selected file:', file);
+    // }
   };
 
   return (
@@ -40,6 +57,7 @@ function FileInput() {
         ref={fileInputRef}
         style={{ display: 'none' }}
         onChange={handleFileChange}
+        required
       />
       <a href="#" onClick={handleFileUpload} className='findCurrentLocation'>
         + Add
