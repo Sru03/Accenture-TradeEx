@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FileUpload from '../components/FileUpload';
 
-const TradieRegisterationPage = () => {
+const TradieRegistrationPage = () => {
 
   const trade_types = [
     { key: 'Carpenter', id: 1 },
@@ -170,7 +170,7 @@ const TradieRegisterationPage = () => {
 
       <div>
           <p className='linkback'>Not a tradie? </p>
-          <a href='/register-user' className='link_to_user'>Register as a User</a>
+          <a href='/register-customer' className='link_to_user'>Register as a User</a>
       </div>
       
     <form action="action_page.php" onSubmit={handleSubmit}>
@@ -309,4 +309,4 @@ const TradieRegisterationPage = () => {
   );
 }
 
-export default TradieRegisterationPage;
+export default TradieRegistrationPage;

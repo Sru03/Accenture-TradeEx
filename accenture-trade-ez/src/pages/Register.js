@@ -1,7 +1,18 @@
 import React from 'react';
 import logo2 from '../assets/main_logo.png';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+
+  const navigation = useNavigate();
+  
+  const handleTradieRegistration = () => {
+    navigation('/register-tradie');
+  };
+  const handleUserRegistration = () => {
+    navigation('/register-customer');
+  };
+
   return (
     <div>
 
@@ -22,11 +33,11 @@ const HomePage = () => {
 
       {/* Button boxes */}
       <div className="sign-up-button-container">
-        <button className="register-user-button" /*</div>onClick={handleUserRegistration}*/>
+        <button className="register-user-button" onClick={handleUserRegistration}>
           <i><p>Need a job done?</p></i>
           <i><p className="second-line">Register as a <b>user</b></p></i>
         </button>
-        <button className="register-tradie-button" /*</div>onClick={handleTradieRegistration}*/>
+        <button className="register-tradie-button" onClick={handleTradieRegistration}>
           <i><p>Looking for a job?</p></i>
           <i><p className="second-line">Register as a <b>tradie</b></p></i>
         </button>
