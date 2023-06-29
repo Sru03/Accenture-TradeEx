@@ -21,9 +21,6 @@ const TradieRegistrationPage = () => {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [selectedTradeTypes, setSelectedTradeTypes] = useState([]);
-  const [businessname, setbusinessname] = useState("");
-  const [businessnumber, setbusinessnumber] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
   const [pdfFile, setPdfFile] = useState(null);
 
   const [firstnameError, setFirstNameError] = useState("");
@@ -32,9 +29,6 @@ const TradieRegistrationPage = () => {
   const [passwordError, setPasswordError] = useState("");
   const [usernameError, setUserNameError] = useState("");
   const [selectedTradeTypesError, setSelectedTradeTypesError] = useState("");
-  const [businessnameerror, setbusinessnameerror] = useState("");
-  const [businessnumbererror, setbusinessnumbererror] = useState("");
-  const [phoneNumberError, setPhoneNumberError] = useState("");
   const [pdfFileError, setPdfFileError] = useState(null);
 
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
@@ -82,13 +76,6 @@ const TradieRegistrationPage = () => {
     setUserNameError(value ? "" : "Please enter your Username");
   };
 
-  // const handlePhoneNumberChange = (e) => {
-  //   const { initvalue } = e.target.value;
-  //   setPhoneNumber(initvalue);
-  //   setPhoneNumberError(
-  //     initvalue.match(/^\d+$/) ? '' : 'Please enter a valid numerical phone number'
-  //   );
-  // };
 
   const handleFileChange = (e) => {
     setPdfFile(e.target.files[0]);
@@ -101,20 +88,6 @@ const TradieRegistrationPage = () => {
     setSelectedTradeTypes(selectedOptions);
     setSelectedTradeTypesError(
       selectedOptions.length > 0 ? "" : "Please select at least one trade type"
-    );
-  };
-
-  const handleBusinessNameChange = (e) => {
-    const { value } = e.target;
-    setbusinessname(value);
-    setbusinessnameerror(value ? "" : "Please enter your Business's name");
-  };
-
-  const handleBusinessNumberChange = (e) => {
-    const { value } = e.target;
-    setbusinessnumber(value);
-    setbusinessnumbererror(
-      value ? "" : "Please enter your Business's phone number"
     );
   };
 
@@ -169,9 +142,6 @@ const TradieRegistrationPage = () => {
       selectedTradeTypesError ||
       firstnameError ||
       lastnameError ||
-      phoneNumberError ||
-      businessnameerror ||
-      businessnumbererror ||
       pdfFileError
     ) {
       // At least one error exists
@@ -357,47 +327,6 @@ const TradieRegistrationPage = () => {
             </select>
           </div>
         </div>
-
-        {/* <div>
-          <p className="section-heading">Business Details</p>
-        </div>
-
-        <div className="row">
-          <div className="col-25">
-            <label for="bname">Business Name</label>
-          </div>
-          <div className={`col-75 ${businessnameerror && "error"}`}>
-            <input
-              type="text"
-              id="bname"
-              name="bname"
-              onChange={handleBusinessNameChange}
-              value={businessname}
-              required
-            ></input>
-            {businessnameerror && (
-              <span className="error-message">{businessnameerror}</span>
-            )}
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-25">
-            <label for="bnumber">New Zealand Business Number</label>
-          </div>
-          <div className={`col-75 ${businessnumbererror && "error"}`}>
-            <input
-              type="text"
-              id="bnumber"
-              name="bnumber"
-              onChange={handleBusinessNumberChange}
-              value={businessnumber}
-              required
-            ></input>
-            {businessnumbererror && (
-              <span className="error-message">{businessnumbererror}</span>
-            )}
-          </div>
-        </div> */}
 
         <div className="row">
           <div className="col-25">
