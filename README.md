@@ -1,6 +1,6 @@
 # TradeEz
 
-<img src="accenture-trade-ez/public/TradeEz-logo-dark.png" alt="TradeEz-logo" width="150">
+<img src="accenture-trade-ez\src\assets\TradeEz-logo-dark.png" alt="TradeEz-logo" width="150">
 
 TradeEz is an online marketplace where the everyday person can hire a tradesperson for their everyday needs.
 
@@ -38,7 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Accenture NZ Technology Bootcamp 2023
 
-<img src="accenture-trade-ez/public/Accenture-black-logo.png" alt="Accenture-logo" width="150"/>
+<img src="accenture-trade-ez\src\assets\Accenture-black-logo.png" alt="Accenture-logo" width="150"/>
 
 This app was created as a part of Accenture New Zealand's Technology Bootcamp 2023.
 
@@ -53,6 +53,7 @@ The final day of the bootcamp involves bringing this all together into a final p
 | Elisa        | Ehsaas   |
 | Euan         | Jacob    |
 | Hammad       | Jonathan |
-| Nancy        | Naera    |
+| Mick         | Naera    |
+| Nancy        |
 | Sebastian    |
 | Srushti      |
