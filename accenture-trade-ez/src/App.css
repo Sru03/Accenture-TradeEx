@@ -45,6 +45,7 @@
 
 ::-webkit-scrollbar-thumb {
   background: white;
+  scrollbar-width: thin;
   -webkit-border-radius: 1ex;
 }
 
@@ -249,14 +250,12 @@ ul {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  margin: 60px;
-  gap: 12rem;
-  align-items: center;
-  justify-content: center;
+  margin: 20px 82px;
+  gap: 2rem;
 }
 
 .job-item {
-  padding: 20px;
+  padding: 30px;
   width: 200px;
   background-color: white;
   border-radius: 20px;
@@ -294,17 +293,6 @@ ul {
   text-align: left;
   font-weight: bold;
   font-size: 38.75px;
-}
-
-.linkback {
-  display: inline;
-  font-size: 24.01px;
-  font-style: italic;
-}
-
-.linkback a {
-  color: #FCA311;
-  
 }
 
 .rounded-textbox {
@@ -433,13 +421,6 @@ input[type="submit"] {
   color: white;
 }
 
-.linkback {
-  display: inline;
-  font-size: 24.01px;
-  font-style: italic;
-  color: #fff;
-}
-
 .link_to_user {
   display: inline;
   font-size: 24.01px;
@@ -509,14 +490,12 @@ input[type="submit"] {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  margin: 60px;
-  gap: 12rem;
-  /* align-items: center; */
-  /* justify-content: space-between; */
+  margin: 20px 82px;
+  gap: 2rem;
 }
 
 .tradie-item {
-  padding: 20px;
+  padding: 30px;
   width: 200px;
   background-color: white;
   border-radius: 20px;
@@ -555,121 +534,17 @@ input[type="submit"] {
   display: inline;
   font-size: 24.01px;
   font-style: italic;
+  color: #fff;
 }
 
 .linkback a {
   color: #fca311;
 }
 
-.rounded-textbox {
-  border-radius: 8px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
-
-.container {
-  margin-left: 100px;
-}
-
 .textbox-heading {
   text-align: left;
   font-size: 26.9px;
   margin-left: auto;
-}
-*/
-
-/* Style inputs, select elements and textareas */
-input[type="text"],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-sizing: border-box;
-  resize: vertical;
-}
-
-/* Style the label to display next to the inputs */
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-  color: #fff;
-  font-size: 26.9px;
-}
-
-/* Style the submit button */
-input[type="submit"] {
-  background-color: #fca311;
-  color: black;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  justify-content: center;
-  font-size: 27px;
-  margin-top: 50px;
-}
-
-/* Style the container */
-.container {
-  border-radius: 5px;
-  background-color: #14213d;
-  padding: 30px;
-  margin-left: 200px;
-}
-
-/* Floating column for labels: 25% width */
-.col-25 {
-  float: left;
-  width: 20%;
-  margin-top: 6px;
-}
-
-/* Floating column for inputs: 75% width */
-.col-75 {
-  float: left;
-  width: 60%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25,
-  .col-75,
-  input[type="submit"] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-
-.page-heading {
-  display: inline;
-  text-align: left;
-  font-weight: bold;
-  font-size: 38.75px;
-  color: #fff;
-}
-
-.section-heading {
-  display: flex;
-  text-align: left;
-  font-weight: bold;
-  font-size: 26.9px;
-  color: #fff;
-  margin-top: 70px;
-}
-
-.error input {
-  border: 3px solid red;
 }
 
 .error-message {
@@ -678,23 +553,10 @@ input[type="submit"] {
   font-size: 15px;
 }
 
-.findCurrentLocation {
-  text-align: left;
-  font-size: 24.01px;
-  color: orange;
-}
-
 .filetext {
   text-align: center;
   font-size: 15px;
   color: white;
-}
-
-.linkback {
-  display: inline;
-  font-size: 24.01px;
-  font-style: italic;
-  color: #fff;
 }
 
 .link_to_user {
@@ -702,23 +564,6 @@ input[type="submit"] {
   font-size: 24.01px;
   font-style: italic;
   color: orange;
-}
-
-.tradie-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  margin: 60px;
-  gap: 12rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.tradie-item {
-  padding: 20px;
-  width: 200px;
-  background-color: white;
-  border-radius: 20px;
 }
 
 .filter-container {

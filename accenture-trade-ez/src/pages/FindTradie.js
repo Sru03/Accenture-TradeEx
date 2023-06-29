@@ -24,7 +24,7 @@ const FindTradie = () => {
         </span>
         <input
           type="search"
-          placeholder=" What type of tradie are you looking for?"
+          placeholder="What type of tradie are you looking for?"
         />
         <button>Search</button>
         <div className="post-job">
