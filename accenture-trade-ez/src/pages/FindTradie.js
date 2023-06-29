@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import TradieList from "../components/TradieList";
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../Firebase.config'
+
+
 
 
 const FindTradie = () => {
+  const [tradie, setTradie] = useState([])
+
+  async function fetchData() {
+    const querySnapshot = await getDocs(collection(db, 'Tradie'));
+    const tradie_list = querySnapshot.docs.map((doc) => doc.data());
+    setTradie(tradie_list);
+    console.log (tradie_list);
+  }
+  useEffect(()=> {
+    fetchData();
+
+  },[]);
   return (
     <>
       <div className="search-tradie">
@@ -11,9 +28,12 @@ const FindTradie = () => {
         <button>POST A JOB</button>
         </div>
       </div>
-    
+      <div>
+        <TradieList tradie={tradie} />
+      </div>
     </>
   );
 };
 
 export default FindTradie;
+
