@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import JobList from "../components/JobList";
 import {collection, getDocs} from 'firebase/firestore';
-import {db } from '../Firebase.config'
+import {db } from '../Firebase.config';
+import { FiFilter } from "react-icons/fi";
+import FilterPopup from "../components/FilterPopup";
+
 
 
 
@@ -21,11 +24,32 @@ const MarketPlace = () => {
   },[]);
 
 
+  const handleFilterClick = () => {
+    console.log("Clicked on Filter");
+  };
+
+
 
   return (
     <div>
       <p>Market Place</p>
-      <SearchBar />
+      <div className = "market-place-search-bar">
+        <SearchBar/>
+
+        <FiFilter  onClick={handleFilterClick}
+        style  = {{ backgroundColor : "white", borderRadius: "10px",  fontWeight: 'lighter', fontSize: "50px" }}/> 
+
+<FilterPopup trigger ={false}>
+            <h3> My Popup</h3>
+            <p> Select Filters </p>
+            <p> Experience</p>
+            <p> Reviews </p>
+        </FilterPopup>
+         </div>
+
+
+       
+      
       <JobList jobs={jobs} />
     </div>
   );
