@@ -242,23 +242,18 @@ ul {
   border-radius: 10px;
 }
 
-.market-place-search-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.search-jobs {
+  justify-content: center; 
   align-items: center;
+  margin-top: 50px;
+  margin-left: 80px;
 }
 
 .filter-popup {
-  position: fixed;
-  top: 300;
-  left: 30;
-  width: 100%;
-  height: 350px;
-  display: flex;
-  border-radius: 10px;
-  justify-content: space-between;
-  align-items: end;
+ position: absolute;
+ margin-left: 80%;
+ 
+
 }
 
 /* .textbox-container {
@@ -503,7 +498,9 @@ input[type="submit"] {
 
 .filter-popup-inner {
   position: relative;
-  padding: 32px;
+  padding : 32px;
+  top: 10px;
+  left: 20px;
   width: 100%;
   max-width: 640px;
   background-color: white;
@@ -683,7 +680,7 @@ input[type="submit"] {
 
 .search-tradie {
   display: flex;
-  /* justify-content: center; */
+
   margin-top: 50px;
   margin-left: 80px;
 }
@@ -751,4 +748,10 @@ input[type="submit"] {
   width: 200px;
   background-color: white;
   border-radius: 20px;
+}
+
+.filter-container {
+
+justify-content: end;
+align-items: end;
 }
