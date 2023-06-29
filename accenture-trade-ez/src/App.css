@@ -397,14 +397,6 @@ input[type=submit] {
   margin-top: 70px;
 }
 
-.error input{
-  border: 3px solid red;
-}
-
-.error-message {
-  color: red;
-}
-
 .findCurrentLocation {
   text-align: left;
   font-family: 'Josefin Sans';
@@ -526,53 +518,6 @@ input[type=submit] {
   right : 16px;
 
 }
-/* .textbox-container {
-  place-items: left;
-}
-
-.page-heading-container{
-  display: flex;
-  gap: 100px;
-  color: #FFF;
-}
-
-.register-page-heading {
-  display: flex;
-  text-align: left;
-  font-family: 'Josefin Sans';
-  font-weight: bold;
-  font-size: 38.75px;
-}
-
-.linkback {
-  display: inline;
-  font-family: 'Josefin Sans';
-  font-size: 24.01px;
-  font-style: italic;
-}
-
-.linkback a {
-  color: #FCA311;
-  
-}
-
-.rounded-textbox {
-  border-radius: 8px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
-
-.container {
-  margin-left: 100px;
-}
-
-.textbox-heading{
-  text-align: left;
-  font-family: 'Josefin Sans';
-  font-size: 26.9px;
-  margin-left: auto;
-} */
 
  /* Style inputs, select elements and textareas */
  input[type=text], select, textarea{
@@ -669,6 +614,8 @@ input[type=submit] {
 
 .error-message {
   color: red;
+  font-family: 'Josefin Sans';
+  font-size: 15px;
 }
 
 .findCurrentLocation {
