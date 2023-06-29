@@ -19,38 +19,32 @@ const MarketPlace = () => {
     fetchData();
   }, []);
 
-  const handleFilterClick = () => {
-    console.log("Clicked on Filter");
-  };
-
   return (
-    <div>
-    
-      <div className="market-place-search-bar">
-        <SearchBar />
+    <>
 
-        <FiFilter
-          onClick={handleFilterClick}
-          style={{
-            backgroundColor: "white",
-            borderRadius: "10px",
-            fontWeight: "lighter",
-            fontSize: "50px",
-            padding : "3px",
-            margin : " 50px"
-          }}
-        />
-
-        <FilterPopup trigger={false}>
-          <h3> My Popup</h3>
-          <p> Select Filters </p>
-          <p> Experience</p>
-          <p> Reviews </p>
-        </FilterPopup>
+<div className="search-tradie">
+        <span className="search-icon">
+          <i className="fas fa-search"></i>
+        </span>
+        <input type="search" placeholder=" What type of tradie are you looking for?" />
+        <button>Search</button>
+        <div className='post-job'>
+        <button>POST A JOB</button>
+        </div>
       </div>
-
-      <JobList jobs={jobs} />
-    </div>
+      <div className="filter-container">
+          <FilterPopup trigger={true}>
+            <h3> Select Filters </h3>
+            <p> Location </p>
+            <p> Price </p>
+            <p> Tradie Category </p>
+          </FilterPopup>
+        </div>
+      
+      <div style = {{ marginTop : "300px"}}>
+        <JobList jobs={jobs} />
+      </div>
+    </>
   );
 };
 
