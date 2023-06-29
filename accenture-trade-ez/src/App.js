@@ -18,6 +18,7 @@ function App() {
             <Route path="/marketplace" element={<MarketPlace/>} />
             <Route path="/find-tradie" element={<FindTradie />} />
             <Route path="/register-tradie" element={<TradieRegisterationPage />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/*" element={<></>} />
         </Routes>
       </div>
