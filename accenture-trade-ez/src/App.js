@@ -5,27 +5,11 @@ import FindTradie from './pages/FindTradie';
 import Register from './pages/Register';
 import MarketPlace from './pages/MarketPlace';
 import Navbar from './components/Navbar'
+import TradieRegistrationPage from './pages/TradieRegistration';
+import CustomerRegistrationPage from './pages/CustomerRegistration';
+import TradieFormSubmission from './pages/TradieFormSubmission';
 
-/*function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}*/
+
 function App() {
   return (
     <>
@@ -35,6 +19,9 @@ function App() {
             <Route path="/" element={<HomePage/>} />
             <Route path="/marketplace" element={<MarketPlace/>} />
             <Route path="/find-tradie" element={<FindTradie />} />
+            <Route path="/register-tradie" element={<TradieRegistrationPage />} />
+            <Route path="/register-customer" element={<CustomerRegistrationPage />} />
+            <Route path="/tradie-success" element={<TradieFormSubmission />} />
             <Route path="/register" element={<Register />} />
             <Route path="/*" element={<></>} />
         </Routes>

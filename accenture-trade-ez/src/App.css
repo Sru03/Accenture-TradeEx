@@ -37,13 +37,41 @@
   }
 }
 
-body{
-  background-color: #14213D;
+::-webkit-scrollbar {
+  height: 0px;
+  width: 10px;
+  background: #999999;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  scrollbar-width: thin;
+  -webkit-border-radius: 1ex;
+}
+
+* {
+  font-family: "Josefin Sans";
+}
+
+h2 {
+  font-family: "Nova Flat";
+  font-size: 26px;
+  margin-top: 0px;
+  font-weight: 100;
+}
+
+h2 > span {
+  font-family: "Nova Flat";
+}
+
+body {
+  background-color: #14213d;
   /*background: linear-gradient(90deg, #000000, #3533cd);
   background-size: 200% 200%;
   -webkit-animation: Animation 5s ease infinite;
   -moz-animation: Animation 5s ease infinite;
   animation: Animation 5s ease infinite;*/
+  font-size: 22px;
 }
 
 .header-container {
@@ -51,7 +79,7 @@ body{
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
-  border-bottom: 4px solid #FFF;
+  border-bottom: 4px solid #fff;
 }
 
 .navbar {
@@ -72,7 +100,7 @@ body{
 }
 
 .navbar-link {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   font-size: 26px;
   font-weight: bold;
@@ -91,15 +119,17 @@ body{
 }
 
 .navbar-link:hover::before {
-  background-color: #FFF;
+  background-color: #fff;
 }
 
+.navbar-link:active {
+}
 
 .logo-container {
   margin-left: 20px;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
@@ -133,7 +163,7 @@ ul{
   color: orange;
 }
 
-.slogan{
+.slogan {
   color: #fff;
   margin: 0 auto;
 }
@@ -148,10 +178,11 @@ ul{
 
 .search-bar input[type="search"] {
   width: 700px; /* Adjust the width as needed */
-  padding: 10px;
-  border-radius: 20px;
+  padding: 15px;
+  border-radius: 30px;
   border: none;
   position: relative;
+  font-size: 22px;
 }
 
 .search-bar .search-icon {
@@ -160,11 +191,12 @@ ul{
 }
 
 .search-bar button {
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 15px 30px;
+  border-radius: 40px;
+  font-size: 22px;
   border: none;
-  background-color: #14213D;
-  color: #FFF;
+  background-color: #14213d;
+  color: #fff;
   font-weight: bold;
   margin-left: 10px;
   cursor: pointer;
@@ -172,30 +204,9 @@ ul{
   border: 2px solid white;
 }
 
-.job-container {
-
-  display : flex;
-  flex-wrap : wrap;
-  padding: 10px;
-  margin: 20px;
-  align-items: center;
-  justify-content: space-between;
-  
-}
-
-.job-item {
-
-  padding : 20px;
+.search-bar button:hover {
   background-color: white;
-  border-radius: 20px;
-
-
-}
-
-.border {
-
-  border-color: black;
-  border-radius: 10px;
+  color: #14213d;
 }
 
 .sign-up-button-container {
@@ -207,24 +218,28 @@ ul{
 
 .register-user-button,
 .register-tradie-button {
-  background-color: #FFF;
+  background-color: #fff;
   width: 400px;
-  color: #000;
+  color: #14213d;
   border: none;
-  border-radius: 20px; 
+  border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  font-size: 24px; 
-  transition: background-color 0.3s ease; 
+  font-size: 24px;
+  transition: background-color 0.3s ease;
 }
 
 .register-user-button:hover,
 .register-tradie-button:hover {
-  background-color: #F6F6F6; 
-  cursor: pointer; 
+  background-color: #f6f6f6;
+  cursor: pointer;
 }
 
 .existing-acc {
   color: white;
+}
+
+.existing-acc > p > b > i {
+  font-weight: 100;
 }
 
 .second-line {
@@ -235,3 +250,353 @@ ul{
   border-bottom: 2px solid white;
 }
 
+.job-item {
+  padding: 30px;
+  width: 200px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.border {
+  border-color: black;
+  border-radius: 10px;
+}
+
+.search-jobs {
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 80px;
+}
+
+.filter-popup {
+  position: absolute;
+  margin-left: 80%;
+}
+
+/* .textbox-container {
+  place-items: left;
+}
+
+.page-heading-container{
+  display: flex;
+  gap: 100px;
+  color: #FFF;
+}
+
+.register-page-heading {
+  display: flex;
+  text-align: left;
+  font-weight: bold;
+  font-size: 38.75px;
+}
+
+.rounded-textbox {
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.container {
+  margin-left: 100px;
+}
+
+.textbox-heading{
+  text-align: left;
+  font-size: 26.9px;
+  margin-left: auto;
+} */
+
+/* Style inputs, select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: #fff;
+  font-size: 26.9px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #fca311;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  justify-content: center;
+  font-size: 27px;
+  margin-top: 50px;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #14213d;
+  padding: 30px;
+  margin-left: 200px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 60%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.page-heading {
+  display: inline;
+  text-align: left;
+  font-weight: bold;
+  font-size: 38.75px;
+  color: #fff;
+}
+
+.section-heading {
+  display: flex;
+  text-align: left;
+  font-weight: bold;
+  font-size: 26.9px;
+  color: #fff;
+  margin-top: 70px;
+}
+
+.error input {
+  border: 3px solid red;
+}
+
+.error-message {
+  color: red;
+}
+
+.findCurrentLocation {
+  text-align: left;
+  font-size: 24.01px;
+  color: orange;
+}
+
+.filetext {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+
+.link_to_user {
+  display: inline;
+  font-size: 24.01px;
+  font-style: italic;
+  color: orange;
+}
+
+.search-tradie {
+  display: flex;
+  /* justify-content: center; */
+  margin-top: 50px;
+  margin-left: 80px;
+}
+
+.search-tradie .search-icon {
+  color: white;
+  margin-right: 10px;
+  padding: 15px;
+}
+
+.search-tradie input[type="search"] {
+  width: 700px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the width as needed */
+  padding: 10px;
+  border-radius: 40px;
+  border: none;
+  font-size: large;
+}
+
+.search-tradie button {
+  padding: 0px 30px;
+  border-radius: 40px;
+  background-color: #14213d;
+  color: #fff;
+  margin-left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 2px solid white;
+}
+
+.search-tradie button:hover {
+  background-color: white;
+  color: #14213d;
+}
+
+.post-job {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 160px;
+}
+
+.post-job button {
+  width: 250px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the width as needed */
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: none;
+  background-color: #fff;
+  color: #282c34;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 100px;
+}
+
+.tradie-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 20px 82px;
+  gap: 2rem;
+}
+
+.tradie-item {
+  padding: 30px;
+  width: 200px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.filter-popup-inner {
+  position: relative;
+  padding: 32px;
+  top: 10px;
+  left: 20px;
+  width: 100%;
+  max-width: 640px;
+  background-color: white;
+}
+
+.filter-popup-inner .close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.page-heading-container {
+  display: flex;
+  gap: 100px;
+  color: #fff;
+}
+
+.register-page-heading {
+  display: flex;
+  text-align: left;
+  font-weight: bold;
+  font-size: 38.75px;
+}
+
+.linkback {
+  display: inline;
+  font-size: 24.01px;
+  font-style: italic;
+  color: #fff;
+}
+
+.linkback a {
+  color: #fca311;
+}
+
+.textbox-heading {
+  text-align: left;
+  font-size: 26.9px;
+  margin-left: auto;
+}
+
+.error-message {
+  color: red;
+  font-family: "Josefin Sans";
+  font-size: 15px;
+}
+
+.filetext {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+
+.link_to_user {
+  display: inline;
+  font-size: 24.01px;
+  font-style: italic;
+  color: orange;
+}
+
+.filter-container {
+  justify-content: end;
+  align-items: end;
+}
+
+.section-container {
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textbox-container {
+  width: 500px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #14213d;
+  font-family: "Josefin Sans";
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.other-textbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Josefin Sans";
+  padding-top: 500px;
+}
