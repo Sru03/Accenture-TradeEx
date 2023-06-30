@@ -4,13 +4,7 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore, collection, query, where, getDocs } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD22i4oft2ddhuuJ_ylNcRbGQShRvpSASg",
-  authDomain: "accenture-trade-ez.firebaseapp.com",
-  projectId: "accenture-trade-ez",
-  storageBucket: "accenture-trade-ez.appspot.com",
-  messagingSenderId: "128982444394",
-  appId: "1:128982444394:web:d1f2ca90b1046c1d391d13",
-  measurementId: "G-ZY86HKGM52"
+  // Your Firebase configuration
 };
 
 const app = initializeApp(firebaseConfig);
@@ -22,8 +16,11 @@ const SearchBar = () => {
 
   const handleSearch = async () => {
     const jobsCollectionRef = collection(db, 'Jobs');
-    const searchTermLowerCase = searchTerm.toLowerCase();
-    const q = query(jobsCollectionRef, where('titleLowerCase', 'array-contains', searchTermLowerCase));
+    const q = query(
+      jobsCollectionRef,
+      where('title', '>=', searchTerm),
+      where('title', '<=', searchTerm + '\uf8ff')
+    );
     const querySnapshot = await getDocs(q);
 
     if (querySnapshot.empty) {
