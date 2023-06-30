@@ -118,7 +118,8 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.navbar-link:hover::before {
+.navbar-link:hover::before,
+.navbar-link.active::before { /* Add this line to underline the active page */
   background-color: #fff;
 }
 

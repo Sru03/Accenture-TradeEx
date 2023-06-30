@@ -1,6 +1,6 @@
 import React from "react";
 import logo1 from "../assets/TradeEz-logonav.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,29 +8,41 @@ const Navbar = () => {
       {/* Logo and Navbar */}
       <div className="header-container">
         {/* Logo */}
-        <Link to="/">
+        <NavLink to="/">
           <div className="logo-container">
             <img src={logo1} alt="TradeEz Logo" className="logo" />
           </div>
-        </Link>
+        </NavLink>
 
         {/* Navbar */}
         <nav className="navbar">
           <ul className="navbar-list">
-            <li className="navbar-item navbar-link">
-              <Link to="/marketplace" className="navbar-link">
+            <li className="navbar-item">
+              <NavLink
+                to="/marketplace"
+                className="navbar-link"
+                activeClassName="active"
+              >
                 Marketplace
-              </Link>
+              </NavLink>
             </li>
-            <li className="navbar-item navbar-link">
-              <Link to="/find-tradie" className="navbar-link">
+            <li className="navbar-item">
+              <NavLink
+                to="/find-tradie"
+                className="navbar-link"
+                activeClassName="active"
+              >
                 Find me a Tradie
-              </Link>
+              </NavLink>
             </li>
-            <li className="navbar-item navbar-link">
-              <Link to="/register" className="navbar-link">
+            <li className="navbar-item">
+              <NavLink
+                to="/register"
+                className="navbar-link"
+                activeClassName="active"
+              >
                 Register
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>
