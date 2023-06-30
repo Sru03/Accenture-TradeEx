@@ -44,7 +44,7 @@ This app was created as a part of Accenture New Zealand's Technology Bootcamp 20
 
 The bootcamp was held over 4 days in June. We were guided by our mentors and the team at Accenture through workshops and coaching to bring the app from business idea to design to solution. Some of the workshops included design thinking, a Figma tutorial, agile, and automation.
 
-The final day of the bootcamp involves bringing this all together into a final presentation for the judging panel.
+The final day of the bootcamp involved bringing this all together into a final presentation for the judging panel. We were awarded Runner Up for our product and presentation.
 
 ### Contributors
 
